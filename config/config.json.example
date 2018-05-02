@@ -1,0 +1,16 @@
+{
+  "app": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "database": {
+    "username": "1test",
+    "password": "1test",
+    "database": "1test",
+    "host": "localhost",
+    "dateStrings": true
+  },
+  "cache": {
+    "ttl": 5
+  }
+}

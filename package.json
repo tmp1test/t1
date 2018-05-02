@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "test server",
+  "main": "bin/www",
+  "scripts": {
+    "start": "DEBUG=1test NODE_ENV=production node app.js",
+    "test": "DEBUG=1test ./node_modules/mocha/bin/mocha --reporter spec -t 10000 --recursive ./tests --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "1test@example.com",
+  "private": true,
+  "dependencies": {
+    "debug": "~3.1",
+    "lodash": "~4.17",
+    "mysql2": "~1.5",
+    "moment": "~2.22",
+    "koa": "~2.5",
+    "koa-router": "~7.4",
+    "koa-bodyparser": "~4.2"
+  },
+  "devDependencies": {
+    "mocha": "~5.1",
+    "request": "~2.85"
+  }
+}

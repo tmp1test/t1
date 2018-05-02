@@ -1,0 +1,15 @@
+# ide
+.idea
+
+# node modules
+node_modules
+
+# config
+config/*.json
+
+# log
+log/
+*.log
+
+# redis
+*.rdb

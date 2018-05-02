@@ -1,0 +1,39 @@
+const controllers = require('../controllers');
+
+module.exports = function (router) {
+  router
+    .get(
+      '/books', 
+      controllers.user.getByToken,
+      controllers.user.checkAcl,
+      controllers.common.getLimitAndOffset,
+      controllers.books.getList
+    )
+    .post(
+      '/books',
+      controllers.user.getByToken,
+      controllers.user.checkAcl,
+      controllers.books.create
+    )
+    .get(
+      '/books/:id(\\d+)', 
+      controllers.user.getByToken,
+      controllers.user.checkAcl,
+      controllers.common.getId,
+      controllers.books.getById
+    )
+    .put(
+      '/books/:id(\\d+)', 
+      controllers.user.getByToken,
+      controllers.user.checkAcl,
+      controllers.common.getId,
+      controllers.books.update
+    )
+    .delete(
+      '/books/:id(\\d+)', 
+      controllers.user.getByToken,
+      controllers.user.checkAcl,
+      controllers.common.getId,
+      controllers.books.remove
+    );
+};
